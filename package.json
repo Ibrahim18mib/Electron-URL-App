@@ -1,0 +1,43 @@
+{
+  "name": "Readit",
+  "version": "1.0.0",
+  "description": "Master Electron Project",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "watch": "nodemon --exec electron .",
+    "reset": "git reset --hard",
+    "build": "electron-builder -w",
+    "win-cert": "electron-builder create-self-signed-cert -p mibrahim"
+  },
+  "repository": "https://github.com/Ibrahim18mib/Electron-URL-App",
+  "homepage": "https://github.com/Ibrahim18mib/Electron-URL-App",
+  "keywords": [
+    "Electron",
+    "Master Electron",
+    "demo"
+  ],
+  "author": "Mibrahim",
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "electron": "^9.0.0",
+    "electron-builder": "^24.13.3",
+    "nodemon": "^2.0.0"
+  },
+  "dependencies": {
+    "electron-window-state": "^5.0.3"
+  },
+  "build": {
+    "appId": "com.mibrahim.readit",
+    "copyright": "CopyRight Mibrahim.mib",
+    "win": {
+      "certificateFile": "private/mibrahim.pfx",
+      "certificatePassword": "",
+      "verifyUpdateCodeSignature": false,
+      "publisherName": "mibrahim"
+    },
+    "linux": {
+      "category": "Utility"
+    }
+  }
+}
